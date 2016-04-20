@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Platform-test</title>
+<link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+<!--if lt IE 9script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')-->
+<link rel="stylesheet" type="text/css" href="assets/lib/jquery.nanoscroller/css/nanoscroller.css">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="texture">
+<div id="cl-wrapper" class="login-container">
+  <div class="middle-login">
+    <div class="block-flat">
+      <div class="header">
+        <h3 class="text-center"><img src="assets/img/logo.png" alt="logo" class="logo-img">Platform-test</h3>
+      </div>
+      <div>
+        <form style="margin-bottom: 0px !important;" action="user/usercheck.php" method="post" class="form-horizontal">
+          <div class="content">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group"><span class="input-group-addon"><i class="fa fa-certificate"></i></span>
+                  <input id="number" name="number" type="text" placeholder="学工号" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group"><span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input id="pwd" name="pwd" type="password" placeholder="密码" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="foot">
+          	<a href="register.html" class="btn btn-default">注册</a>
+          	<input type="submit" class="btn btn-primary" name="button" id="button" value="登录" onClick="return eg.logCheck();"/>
+          </div>
+        </form>
+        <script language="javascript">
+			var eg = {};
+			eg.$ = function(id)
+			{
+				return document.getElementById(id);
+			};
+			eg.logCheck = function()
+			{
+				var uid = eg.$("number");
+				var upwd = eg.$("pwd");
+				if(uid.value == "")
+				{
+					alert('账户不能为空！');
+					return false;
+				}
+				if(upwd.value == "")
+				{
+					alert('密码不能为空！');
+					return false;
+				}
+				return true;
+			};
+		</script>
+      </div>
+    </div>
+    <div class="text-center out-links"><a href="#">© 2016 Your Company</a></div>
+  </div>
+</div>
+<script type="text/javascript" src="assets/lib/jquery/jquery.min.js"></script><script type="text/javascript" src="assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.js"></script><script type="text/javascript" src="assets/js/cleanzone.js"></script><script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script><script type="text/javascript">$(document).ready(function(){
+	//initialize the javascript
+	App.init();
+});
+</script>
+</body>
+</html>
