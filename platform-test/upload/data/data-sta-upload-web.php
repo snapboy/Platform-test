@@ -3,6 +3,10 @@
 	$user_num=$_SESSION["number"];
 	
 	//进入上传文件夹
+	if(!file_exists("../../save/"))
+	{
+		mkdir("../../save/");
+	}
 	$fp = opendir("../../save");
 	
 	//检测该用户个人文件夹是否存在，若否，创建

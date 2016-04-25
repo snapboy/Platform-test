@@ -86,81 +86,52 @@
               <h3>数据库上传及参数设置</h3>
             </div>
             <div class="content">
-              <form action="upload/db/db-upload.php" style="border-radius: 0px;" class="form-horizontal group-border-dashed">
+              <form action="upload/db/db-upload.php" method="POST" style="border-radius: 0px;" class="form-horizontal group-border-dashed" enctype="multipart/form-data">
                 <div class="form-group">
                   <label class="col-sm-3 control-label">文件路径</label>
                   <div class="col-sm-6">
-                    <input type="file" placeholder="文件路径" class="form-control">
+                    <input name="file" type="file" placeholder="文件路径" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-3 control-label">直接输入参数</label>
+                  <label class="col-sm-3 control-label">Checkbox</label>
                   <div class="col-sm-6">
-                    <input type="text" placeholder="Placeholder text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">不可修改参数</label>
-                  <div class="col-sm-6">
-                    <input type="text" disabled="disabled" placeholder="Disabled input text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">下拉列表参数</label>
-                  <div class="col-sm-6">
-                    <select class="form-control">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">单选参数</label>
-                  <div class="col-sm-6">
-                    <label class="radio-inline">
-                      <input type="radio" checked="" name="rad1" class="icheck">
-                    Option 1</label>
-                    <label class="radio-inline">
-                      <input type="radio" name="rad1" class="icheck">
-                      Option 2</label>
-                    <label class="radio-inline">
-                      <input type="radio" name="rad1" class="icheck">
-                      Option 3</label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">多选参数</label>
-                  <div class="col-sm-6">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" checked="" name="rad1" class="icheck">
-                      Option 1</label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" name="rad1" class="icheck">
-                      Option 2</label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" name="rad1" class="icheck">
-                      Option 3</label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">开关选项</label>
-                  <div class="col-sm-6">
-                    <input type="checkbox" data-size="small" checked="" data-on-color="info" data-off-color="primary" class="switch">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">滑动参数设置</label>
-                  <div class="col-sm-6">
-                    <input type="text" value="" class="bslider form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">滑动范围参数设置</label>
-                  <div class="col-sm-6">
-                    <input type="text" data-slider-value="[250,450]" data-slider-step="5" data-slider-max="1000" data-slider-min="10" value="" class="bslider form-control">
+                    <div class="radio">
+                      <label>
+                        <input type="checkbox" name="check[]" value="0" class="icheck">
+                        Phospho</label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="checkbox" name="check[]" value="1" class="icheck">
+                        Acetyl</label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="checkbox" name="check[]" value="2" class="icheck">
+                        FormylMet</label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="checkbox" name="check[]" value="3" class="icheck">
+                        Succinyl</label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="checkbox" name="check[]" value="4" class="icheck">
+                        Meghyl</label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="checkbox" name="check[]" value="5" class="icheck">
+                        Microcin</label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="checkbox" name="check[]" value="6" class="icheck">
+                        CoenzymeA</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">提交</button>
                   </div>
                 </div>
               </form>

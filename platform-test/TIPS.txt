@@ -1,0 +1,6 @@
+TIPS
+1.Apache和IIS服务器端口默认都是80，更改其中一个使两个服务器可以同时运行
+2.Php.ini	中设置session_auto_start = 1
+3.Php.ini	中关闭安全模式，使exec()和system()可用
+4.Php.ini中设置session.gc_maxlifetime = 86400
+5.记得改有关ftp的IP地址
