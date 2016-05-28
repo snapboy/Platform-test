@@ -16,12 +16,14 @@
 	}
 	else
 	{
-		require_once("../dbconn.inc");	//系统配置文件
+		$t=time();
+		
+		require_once("../sysconf.inc");	//系统配置文件
 		
 		$linker=mysql_connect($DBHOST,$DBUSER,$DBPWD);			//连接数据库
 		mysql_select_db($DBNAME); 		//选择数据库
 		$init=mysql_query("set name utf8");
-		$str="insert into users values('$name','$number','$pwd','$phone','$email','0')";
+		$str="insert into users values('$name','$number','$pwd','$phone','$email','$t','$t','0','0')";
 		$result=mysql_query($str, $linker); //执行查询
 		mysql_close($linker);
 		

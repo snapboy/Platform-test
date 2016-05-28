@@ -3,7 +3,7 @@
 
 	$number=$_POST["number"];
 	
-	require_once("../dbconn.inc");
+	require_once("../sysconf.inc");
 	
 	//连接数据库
 	$linker=mysql_connect($DBHOST,$DBUSER,$DBPWD);			
@@ -18,11 +18,16 @@
 	//如果密码输入正确
 	if($password==$_POST["pwd"])
 	{
+		$t=time();
+		
 		$_SESSION["number"]=$number;
+		
+		$str2="update users set ltime='$t' where number ='$number'";
+		$result2=mysql_query($str2,$linker);
 		
 		//转到个人页面	
 		echo "<script language='javascript'>";	
-		echo "location='../index.html?number=".$number."';";
+		echo "location='../index.php';";
 		echo "</script>";
 	}
 	//密码输入错误
